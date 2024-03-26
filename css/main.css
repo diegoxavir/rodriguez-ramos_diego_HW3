@@ -1,0 +1,73 @@
+.animation-container {
+    overflow: hidden;
+    width: 700px;
+    height: 400px;
+    position: relative;
+    margin: 0 auto;
+    top: 400px;
+}
+
+img {
+    width: 400px;
+    position: absolute;
+    margin-left: 142px;
+    margin-top: 170px;
+}
+
+#stick-1, #stick-3 {
+    left: -900px;
+}
+
+#stick-1 {
+    animation: left-sticks 1s forwards;
+}
+
+#stick-3 {
+    animation: left-sticks 1s 1s forwards;
+}
+
+@keyframes left-sticks {
+    0%{
+        left: -900px;
+    }
+    100% {
+        left: 0px;
+    }
+}
+
+#stick-2, #stick-4 {
+    right: -900px;
+}
+
+#stick-2 {
+    animation: right-sticks 1s 0.5s forwards;
+}
+
+#stick-4 {
+    animation: right-sticks 1s 1.5s forwards;
+}
+
+@keyframes right-sticks {
+    0%{
+        right: -900px;
+    }
+    100% {
+        right: 150px;
+    }
+}
+
+#fire {
+    opacity: 0;
+    animation: fire 1s 2.5s forwards;
+    margin-top: 0;
+    margin-left: 162px;
+}
+
+@keyframes fire {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
